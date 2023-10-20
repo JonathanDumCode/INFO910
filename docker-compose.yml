@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+
+#  NODE:
+#   image: node_plus
+#   restart: always
+#   volumes:
+#    - ./node:/src
+#   depends_on:
+#    - "db"
+#   ports:
+#    - 81:8081
+
+ db:
+  image: mysql:8.0
+  command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4
+  environment:
+   MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+   MYSQL_DATABASE: ${MYSQL_DATABASE}
+   MYSQL_USER: ${MYSQL_USER}
+   MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+  volumes:
+   - ./SQL:/var/lib/mysql
+  ports:
+   - 3306:3306
+  expose:
+   - 3306/tcp
+   - 3306/udp
+
+ adminer:
+  image: adminer:latest
+  environment:
+   PMA_ARBITRARY: 1
+   PMA_HOST: db
+   #PMA_USER: myuser
+   #PMA_PASSWORD: monpassword
+   UPLOAD_LIMIT: 20M
+  ports:
+   - 8080:8080
+

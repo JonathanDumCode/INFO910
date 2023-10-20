@@ -1,0 +1,23 @@
+#navbar li{
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    transition: 0.3s;
+}
+
+#navbar li:hover{
+    border-bottom: 3px solid darkred;
+    transition: 0.3s;
+}
+.navbarUnSelect{
+    border-bottom: 3px solid black;
+}
+
+.navbarSelect{
+    border-bottom: 3px solid darkred;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.mjs"></script>
+    <title>Acceuil</title>
+</head>
+<body onload="setup()">
+    <header>
+        <h1>Les outils de Jo & Ro xD</h1>
+        <ul id="navbar">
+        </ul>
+    </header>
+    
+    <section id="Acceuil">
+        <h1>Acceuil</h1>
+    </section>
+
+    <section id="Preset">
+        <h1>Preset</h1>
+
+        <div>
+            <h1>Ajout de Preset</h1>
+            <p>Nom : <input type="text" id="Preset_name"></p>
+            <p>Description : <input type="text" id="Preset_desc"></p>
+            <p>Mot de Passe : <input type="text" id="Preset_mdp"></p>
+            <p>Mot de Passe Admin : <input type="text" id="Preset_mdpadmin"></p>
+            <p><button onclick="SendAddPreset()">Ajouter</button></p>
+        </div>
+    </section>
+
+    <section id="Element">
+        <h1>Element</h1>
+    </section>
+
+    <section id="Combianaison">
+        <h1>Combinaison</h1>
+    </section>
+</body>
+</html>
